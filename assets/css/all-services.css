@@ -1,0 +1,641 @@
+/* ======= Typography style ======= */
+:root {
+    --primary-blue: #144A73;
+    --secondary-blue: #282982;
+    --text-color: #3d3d3d;
+    --white: #FFF;
+    --black: #000000;
+    --bg-white: #F9F9F9;
+}
+
+
+
+
+
+html,
+body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    height: 100%;
+    width: 100%;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+    word-wrap: break-word;
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.95em;
+    color: var(--gray);
+    overflow-x: hidden !important;
+    background: var(--white);
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* BreadCrumb Section */
+.breadcrumb-box {
+    position: relative;
+    background: url('../img/intro.jpg') center center / cover no-repeat;
+    width: 100%;
+    padding: clamp(4rem, 10vw, 8rem) 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    margin-top: clamp(30px, 10vh, 100px);
+}
+
+.breadcrumb-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.breadcrumb-content {
+    max-width: 800px;
+}
+
+
+.breadcrumb-content>* {
+    position: relative;
+    z-index: 2;
+}
+
+.breadcrumb-content h1 {
+    text-transform: uppercase;
+    font-size: clamp(35px, 6vw, 55px);
+}
+
+.breadcrumb-content p {
+    text-transform: uppercase;
+    font-size: 16px;
+    color: var(--white);
+}
+
+.breadcrumb-content a {
+    text-transform: uppercase;
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--white);
+    padding: 10px 20px;
+    margin: 5px 5px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #012e5b 40%, #496bff 100%);
+}
+
+.breadcrumb-content span {
+    text-transform: uppercase;
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--white);
+    padding: 10px 20px;
+    margin: 5px 5px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #012e5b 40%, #496bff 100%);
+}
+
+
+@media (max-width:945px) {
+    .breadcrumb-content {
+        max-width: 800px;
+        margin-top: 40px;
+    }
+}
+
+/* BreadCrumb Section */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ABOUT INTRO SECTION */
+
+.hero-intro-section {
+    color: black;
+}
+
+.hero-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+.hero-intro p {
+    text-align: start;
+    max-width: 1400px;
+}
+
+.hero-intro p a {
+    color: var(--secondary-blue);
+}
+
+.hero-intro-img-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-intro-img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* ABOUT INTRO SECTION */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======LEFT SIDE SERVICE LIST ====== */
+
+/* lets talk cta bg img */
+.all-service-section {
+    background-color: var(--bg-white);
+}
+
+.all-service-section .container .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+/* lets talk cta bg img */
+.all-service-content {
+    padding: 10px;
+}
+
+.lets-talk {
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.lets-talk .bg-img {
+    border-radius: 30px;
+}
+
+.lets-talk .section-title {
+    font-size: 25px;
+}
+
+/* lets talk cta bg img */
+
+
+
+
+
+
+
+/* WHY choose us list */
+
+.all-service-why-choose {
+    padding: 40px 10px;
+    padding-bottom: 0px;
+}
+
+.why-choose-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    padding: 5px;
+    background: linear-gradient(135deg, #012e5b 40%, #496bff 100%);
+    transition: all 0.3s ease;
+}
+
+
+.why-choose-list:hover {
+    transform: scale(1.03);
+}
+
+
+
+.why-choose-list p {
+    margin: 0px;
+    padding-left: 20px;
+    color: var(--white);
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.why-choose-list img {
+    width: 50px;
+}
+
+
+
+
+
+/* ======LEFT SIDE SERVICE LIST ====== */
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======RIGHT SIDE SERVICE LIST ====== */
+
+.all-service-list {
+    border: 2px solid rgba(134, 134, 134, 0.2);
+    padding: 30px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: var(--white);
+}
+
+
+.all-service-list .row .col-12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.all-service-list .service-list {
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 50px;
+    color: var(--white);
+    width: 90%;
+    background: linear-gradient(135deg, #000000 30%, #4e5057 100%);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.all-service-list .service-list:hover {
+    transform: scale(1.05);
+}
+
+
+.service-list.active {
+    background: linear-gradient(135deg, #012e5b 40%, #496bff 100%);
+    transform: scale(1.05);
+}
+
+/* ======RIGHT SIDE SERVICE LIST ====== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= OUR PROCESS SECTION ================= */
+.process-section {
+    padding: 80px 20px 100px;
+    background-color: var(--white);
+}
+
+/* Header Section */
+.process-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.header-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Steps Container */
+.steps-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.steps-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    gap: 20px;
+}
+
+/* Dotted Lines */
+.step-connector {
+    position: absolute;
+    top: 50px;
+    height: 2px;
+    border-top: 2px dashed #d1d5db;
+    z-index: 0;
+}
+
+.connector-1 {
+    left: calc(16.66% + 40px);
+    width: calc(16.66% - 40px);
+}
+
+.connector-2 {
+    left: calc(50% + 40px);
+    width: calc(16.66% - 40px);
+}
+
+/* Curved connectors */
+.curved-connector {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.curved-line {
+    fill: none;
+    stroke: var(--secondary-blue);
+    stroke-width: 2;
+    stroke-dasharray: 5, 5;
+}
+
+/* Individual Step */
+.process-step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    max-width: 300px;
+}
+
+.step-number {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6b7280;
+    margin-bottom: 15px;
+}
+
+.step-icon-wrapper {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 25px;
+}
+
+/* Icon circles */
+.icon-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    background: var(--bg-white);
+    transition: all 0.3s ease;
+}
+
+.step-1 .icon-circle {
+    background: var(--bg-white);
+    border: 2px dashed #90caf9;
+}
+
+.step-2 .icon-circle {
+    background: var(--bg-white);
+    border: 2px dashed #90caf9;
+}
+
+.step-3 .icon-circle {
+    background: var(--bg-white);
+    border: 2px dashed #80cbc4;
+}
+
+.icon-circle svg {
+    width: 45px;
+    height: 45px;
+}
+
+.step-1 .icon-circle svg {
+    fill: var(--primary-blue);
+}
+
+.step-2 .icon-circle svg {
+    fill: #26a69a;
+}
+
+.step-3 .icon-circle svg {
+    fill: #4c26a6;
+}
+
+.step-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+.step-description {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    line-height: 1.6;
+    max-width: 260px;
+    margin: 0 auto;
+}
+
+/* Hover effects */
+.process-step:hover .icon-circle {
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 8px, rgba(0, 0, 0, 0.23) 0px 3px 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .steps-wrapper {
+        gap: 15px;
+    }
+
+    .step-icon-wrapper {
+        width: 80px;
+        height: 80px;
+    }
+
+    .icon-circle {
+        width: 80px;
+        height: 80px;
+    }
+
+    .icon-circle svg {
+        width: 35px;
+        height: 35px;
+    }
+
+    .connector-1,
+    .connector-2 {
+        top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .process-section {
+        padding: 60px 20px 80px;
+    }
+
+    .process-header {
+        margin-bottom: 60px;
+    }
+
+    .steps-wrapper {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .process-step {
+        max-width: 100%;
+    }
+
+    .step-connector,
+    .curved-connector {
+        display: none;
+    }
+
+    /* Vertical connectors for mobile */
+    .process-step::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -50px;
+        width: 2px;
+        height: 40px;
+        border-left: 2px dashed #d1d5db;
+        transform: translateX(-50%);
+    }
+
+    .process-step:last-child::after {
+        display: none;
+    }
+
+    .step-description {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .process-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .step-title {
+        font-size: 1.1rem;
+    }
+
+    .step-description {
+        font-size: 0.9rem;
+    }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.process-step {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.process-step:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.process-step:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.process-step:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+/* ================= OUR PROCESS SECTION ================= */
