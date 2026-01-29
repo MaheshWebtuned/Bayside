@@ -52,8 +52,9 @@
 
 /* ======= Typography style ======= */
 :root {
-  --primary-blue: #144A73;
+  --primary-blue: #032349;
   --secondary-blue: #282982;
+  --light-blue: #6985E5;
   --text-color: #3d3d3d;
   --white: #FFF;
   --black: #000000;
@@ -1106,7 +1107,7 @@ hr {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 18px;
-  color: var(--black);
+  color: var(--white);
   margin: 1px;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
@@ -1174,7 +1175,7 @@ a.logo {
 }
 
 .nav-scroll .navbar-nav .nav-link {
-  color: var(--black);
+  color: var(--white);
   font-weight: 400;
 }
 
@@ -2045,12 +2046,12 @@ a.logo {
 
 .services-header h2 {
   letter-spacing: 1px;
-  color: var(--black);
+  color: var(--white);
   margin: 0px;
 }
 
 .services-header h2 span {
-  color: var(--white);
+  color: var(--light-blue);
 }
 
 .services-header p {
@@ -2091,11 +2092,12 @@ a.logo {
 
 .service-card h3 {
   font-size: 20px;
-  font-weight: 400;
-  color: var(--secondary-blue);
+  font-weight: 500;
+  color: var(--light-blue);
   border-bottom: 2px solid var(--secondary-blue);
   display: inline-block;
   padding-bottom: 4px;
+  text-transform: uppercase;
 }
 
 .service-card p {
@@ -2347,7 +2349,7 @@ a.logo {
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 10px;
-  color: var(--primary-blue);
+  color: var(--light-blue);
 }
 
 .wc-card p {
@@ -2520,6 +2522,7 @@ a.logo {
   transform: scale(1) translateX(-10px);
   box-shadow: 0 5px 20px rgba(102, 126, 234, 0.8);
   background: var(--white);
+  color: var(--black);
   z-index: 10;
 }
 
@@ -2556,13 +2559,13 @@ a.logo {
 .card-info h3 {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #2d3748;
+  color: var(--light-blue);
   margin-bottom: 5px;
 }
 
 .card-info p {
-  font-size: 0.95rem;
-  color: #718096;
+  font-size: 16px;
+  color: var(--black);
   line-height: 1.5;
 }
 
@@ -3520,15 +3523,15 @@ select {
 }
 
 .sec-title h2 {
-  color: var(--black);
+  color: var(--secondary-blue);
   font-size: clamp(30px, 4vw, 45px);
-  font-weight: 400;
+  font-weight: 500;
   text-transform: uppercase;
   margin: 0px;
 }
 
 .sec-title h2 span {
-  color: var(--primary-blue);
+  color: var(--light-blue);
 }
 
 .sec-title p {

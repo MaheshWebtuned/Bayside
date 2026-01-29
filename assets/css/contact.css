@@ -1,13 +1,15 @@
 
 /* ======= Typography style ======= */
 :root {
-  --primary-blue: #144A73;
+  --primary-blue: #032349;
   --secondary-blue: #282982;
+  --light-blue: #6985E5;
   --text-color: #3d3d3d;
   --white: #FFF;
   --black: #000000;
   --bg-white: #F9F9F9;
 }
+
 
 
 
@@ -169,12 +171,15 @@ body {
 }
 
 .contact-title {
-    font-size: 3rem;
-    font-weight: 800;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 30px;
     color: var(--secondary-blue);
+}
+
+.contact-title span{
+    color: var(--light-blue);
 }
 
 .contact-description {
