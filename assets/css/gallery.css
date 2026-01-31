@@ -1,13 +1,12 @@
-
 /* ======= Typography style ======= */
 :root {
-  --primary-blue: #032349;
-  --secondary-blue: #282982;
-  --light-blue: #6985E5;
-  --text-color: #3d3d3d;
-  --white: #FFF;
-  --black: #000000;
-  --bg-white: #F9F9F9;
+    --primary-blue: #032349;
+    --secondary-blue: #282982;
+    --light-blue: #6985E5;
+    --text-color: #3d3d3d;
+    --white: #FFF;
+    --black: #000000;
+    --bg-white: #F9F9F9;
 }
 
 
@@ -16,34 +15,34 @@
 
 html,
 body {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  height: 100%;
-  width: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    height: 100%;
+    width: 100%;
 
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  outline: none;
-  list-style: none;
-  word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+    word-wrap: break-word;
 }
 
 body {
-  font-family: "Outfit", sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.95em;
-  color: var(--gray);
-  overflow-x: hidden !important;
-  background: var(--white);
-  overflow-x: hidden;
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.95em;
+    color: var(--gray);
+    overflow-x: hidden !important;
+    background: var(--white);
+    overflow-x: hidden;
 }
 
 
@@ -65,7 +64,7 @@ body {
 /* BreadCrumb Section */
 .breadcrumb-box {
     position: relative;
-    background: url('../img/intro.jpg') center center / cover no-repeat;
+    background: url('../img/services/i6.jpg') center center / cover no-repeat;
     width: 100%;
     padding: clamp(4rem, 10vw, 8rem) 1rem;
 
@@ -86,7 +85,7 @@ body {
 }
 
 .breadcrumb-content {
-    max-width: 800px;
+    max-width: 900px;
 }
 
 
@@ -131,7 +130,7 @@ body {
 
 @media (max-width:945px) {
     .breadcrumb-content {
-        max-width: 800px;
+        max-width: 900px;
         margin-top: 40px;
     }
 }
@@ -351,6 +350,28 @@ body {
 }
 
 /* Responsive */
+
+@media (max-width: 991px) {
+    .gallery-section {
+        padding: 60px 15px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+
+    #lightbox {
+        display: none !important;
+    }
+}
+
+
+
 @media (max-width: 768px) {
     .gallery-section {
         padding: 60px 15px;
@@ -365,44 +386,7 @@ body {
         gap: 15px;
     }
 
-    .lightbox-close {
-        top: 15px;
-        right: 15px;
-        width: 40px;
-        height: 40px;
-        font-size: 24px;
-    }
-
-    .lightbox-nav {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-    }
-
-    .lightbox-prev {
-        left: 15px;
-    }
-
-    .lightbox-next {
-        right: 15px;
-    }
-
-    .lightbox-indicators {
-        bottom: 20px;
-        gap: 8px;
-        max-width: 90%;
-        overflow-x: auto;
-        padding: 5px;
-    }
-
-    .indicator {
-        width: 50px;
-        height: 50px;
-    }
-
-    .indicator.active {
-        transform: scale(1.15);
-    }
+    
 }
 
 @media (max-width: 480px) {
@@ -414,10 +398,6 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .indicator {
-        width: 45px;
-        height: 45px;
-    }
 }
 
 

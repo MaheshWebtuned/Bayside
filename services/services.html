@@ -291,7 +291,7 @@
 
         <div class="container bci-services-container">
 
-            <div class="text-center bci-services-header">
+            <div class="text-center bci-services-header animate-top">
                 <h2>OUR <span>SERVICES</span></h2>
                 <p>Call Today To Discuss Your Needs With Us</p>
             </div>
@@ -299,7 +299,7 @@
             <div class="row g-4 justify-content-center">
 
                 <!-- Card -->
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4 animate-bottom">
                     <div class="bci-service-card">
                         <img src="../assets/img/home/service1.jpg" alt="">
                         <div class="bci-card-body text-center">
@@ -315,7 +315,7 @@
                 </div>
 
                 <!-- Card -->
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4 animate-bottom">
                     <div class="bci-service-card">
                         <img src="../assets/img/home/service2.jpg" alt="">
                         <div class="bci-card-body text-center">
@@ -332,7 +332,7 @@
 
 
                 <!-- Card -->
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4 animate-bottom">
                     <div class="bci-service-card">
                         <img src="../assets/img/home/service3.jpg" alt="">
                         <div class="bci-card-body text-center">
@@ -349,7 +349,7 @@
 
 
                 <!-- Card -->
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4 animate-bottom">
                     <div class="bci-service-card">
                         <img src="../assets/img/home/service4.jpg" alt="">
                         <div class="bci-card-body text-center">
@@ -365,7 +365,7 @@
                 </div>
 
                 <!-- Card -->
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4 animate-bottom">
                     <div class="bci-service-card">
                         <img src="../assets/img/home/service5.jpg" alt="">
                         <div class="bci-card-body text-center">
@@ -382,7 +382,7 @@
                 </div>
 
                 <!-- Card -->
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4 animate-bottom">
                     <div class="bci-service-card">
                         <img src="../assets/img/home/service6.jpg" alt="">
                         <div class="bci-card-body text-center">
@@ -428,15 +428,15 @@
 
     <section class="lets-talk">
         <div class="background bg-img bg-fixed section-padding" data-overlay-dark="7"
-            data-background="../assets/img/home/4.jpg">
+            data-background="../assets/img/services/i4.jpg">
             <div class="container text-center">
 
-                <div class="section-title text-center text-white pb-4 fw-light ">
+                <div class="section-title text-center text-white pb-4 fw-light animate-top">
                     Are you looking for affordable high quality interior solutions? Bayside Commercial Interiors Can
                     help. Call today to Request a free quote!
                 </div>
 
-                <a href="../contact.html" class="button-1 ">REQUEST A QUOTE<span class="ti-arrow-top-right"></span></a>
+                <a href="../contact.html" class="button-1 animate-bottom">REQUEST A QUOTE<span class="ti-arrow-top-right"></span></a>
 
             </div>
         </div>
@@ -474,7 +474,7 @@
     ========================================= -->
 
     <section class="over-footer-banner">
-        <div class="over-footer-contain container">
+        <div class="over-footer-contain container animate-fade">
             SERVICE FROM BAYSIDE COMMERCIAL INTERIORS ARE TRUSTED, RELIABLE AND PROFESSIONAL
         </div>
     </section>
@@ -585,6 +585,57 @@
 
 
 
+
+
+
+
+
+    <!--============================
+            ANIMATION JS
+  ==============================-->
+    <script>
+        // Scroll Animation Script
+        (function () {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    const groups = {}; // Group by animation type
+
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            const el = entry.target;
+                            const animationType = Array.from(el.classList).find((cls) =>
+                                cls.startsWith("animate-")   // updated prefix
+                            );
+
+                            if (!groups[animationType]) groups[animationType] = [];
+                            groups[animationType].push(el);
+
+                            observer.unobserve(el); // Animate only once
+                        }
+                    });
+
+                    // Apply stagger per animation group
+                    Object.values(groups).forEach((group) => {
+                        group.forEach((el, index) => {
+                            setTimeout(() => {
+                                el.classList.add("animate-visible"); // updated suffix
+                            }, index * 300); // Delay between elements
+                        });
+                    });
+                },
+                { threshold: 0.2 }
+            );
+
+            // Observe all animate elements
+            document.querySelectorAll('[class*="animate-"]').forEach((el) => {
+                observer.observe(el);
+            });
+        })();
+
+    </script>
+    <!--============================
+            ANIMATION JS
+  ==============================-->
 
 
 

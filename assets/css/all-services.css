@@ -1,12 +1,12 @@
 /* ======= Typography style ======= */
 :root {
-  --primary-blue: #032349;
-  --secondary-blue: #282982;
-  --light-blue: #6985E5;
-  --text-color: #3d3d3d;
-  --white: #FFF;
-  --black: #000000;
-  --bg-white: #F9F9F9;
+    --primary-blue: #032349;
+    --secondary-blue: #282982;
+    --light-blue: #6985E5;
+    --text-color: #3d3d3d;
+    --white: #FFF;
+    --black: #000000;
+    --bg-white: #F9F9F9;
 }
 
 
@@ -61,7 +61,7 @@ body {
 /* BreadCrumb Section */
 .breadcrumb-box {
     position: relative;
-    background: url('../img/intro.jpg') center center / cover no-repeat;
+    background: url('../img/services/i7.jpg') center center / cover no-repeat;
     width: 100%;
     padding: clamp(4rem, 10vw, 8rem) 1rem;
 
@@ -82,7 +82,7 @@ body {
 }
 
 .breadcrumb-content {
-    max-width: 800px;
+    max-width: 900px;
 }
 
 
@@ -127,7 +127,7 @@ body {
 
 @media (max-width:945px) {
     .breadcrumb-content {
-        max-width: 800px;
+        max-width: 900px;
         margin-top: 40px;
     }
 }
@@ -183,6 +183,194 @@ body {
     object-position: center;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.pulse-button {
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    position: relative;
+    width: 200px;
+    padding: 15px 30px;
+    text-align: left;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #012e5b, #2e53fc);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    /* remove underline */
+    display: inline-block;
+    -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+
+}
+
+
+
+.pulse-button:hover {
+    -webkit-animation: none;
+    -moz-animation: none;
+    -ms-animation: none;
+    animation: none;
+    color: var(--white);
+    transform: scale(1.04);
+    background: linear-gradient(135deg, #6985E5, #0133d8);
+}
+
+.pulse-button span {
+    position: absolute;
+    right: 4px;
+    top: 5%;
+    transform: translateY(-50%);
+    background: var(--light-blue);
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    animation: heartbeat-pulse 2s ease-in-out infinite;
+}
+
+.pulse-button:hover span {
+    background: var(--secondary-blue);
+}
+
+
+.pulse-button span i {
+    font-size: 30px;
+    color: var(--white);
+    -webkit-animation: wiggle 1s infinite;
+    -moz-animation: wiggle 1s infinite;
+    animation: wiggle 1s infinite;
+
+}
+
+
+
+/* Pulse glow */
+@-webkit-keyframes pulse {
+    to {
+        box-shadow: 0 0 0 25px rgba(255, 232, 160, 0);
+    }
+}
+
+@-moz-keyframes pulse {
+    to {
+        box-shadow: 0 0 0 25px rgba(255, 232, 160, 0);
+    }
+}
+
+@-ms-keyframes pulse {
+    to {
+        box-shadow: 0 0 0 25px rgba(255, 232, 160, 0);
+    }
+}
+
+@keyframes pulse {
+    to {
+        box-shadow: 0 0 0 25px rgba(255, 232, 160, 0);
+    }
+}
+
+/* Wiggle animation */
+@-webkit-keyframes wiggle {
+    0% {
+        -webkit-transform: rotate(-100deg);
+    }
+
+    50% {
+        -webkit-transform: rotate(-50deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(-100deg);
+    }
+}
+
+@-moz-keyframes wiggle {
+    0% {
+        -moz-transform: rotate(-100deg);
+    }
+
+    50% {
+        -moz-transform: rotate(-50deg);
+    }
+
+    100% {
+        -moz-transform: rotate(-100deg);
+    }
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(-100deg);
+    }
+
+    50% {
+        transform: rotate(-50deg);
+    }
+
+    100% {
+        transform: rotate(-100deg);
+    }
+}
+
+
+@keyframes heartbeat-pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(46, 83, 252, 0.8);
+    }
+
+    10% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 10px rgba(46, 83, 252, 0.6);
+    }
+
+    20% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(46, 83, 252, 0.4);
+    }
+
+    30% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 10px rgba(46, 83, 252, 0.6);
+    }
+
+    40% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(46, 83, 252, 0.2);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(46, 83, 252, 0);
+    }
+}
+
+
+
+
+
 /* ABOUT INTRO SECTION */
 
 
@@ -200,16 +388,6 @@ body {
 
 /* ======LEFT SIDE SERVICE LIST ====== */
 
-/* lets talk cta bg img */
-.all-service-section {
-    background-color: var(--bg-white);
-}
-
-.all-service-section .container .row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 
 
@@ -218,75 +396,55 @@ body {
 
 
 
-
-/* lets talk cta bg img */
-.all-service-content {
-    padding: 10px;
-}
-
-.lets-talk {
-    border-radius: 30px;
+/* CTA Section */
+.cta-section {
     overflow: hidden;
 }
 
-.lets-talk .bg-img {
+.cta-section .container {
     border-radius: 30px;
+    background-image: url("../img/banner-3.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
 }
 
-.lets-talk .section-title {
-    font-size: 25px;
+/* Dark overlay */
+.cta-section .container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 30px;
+    z-index: 1;
+
 }
 
-/* lets talk cta bg img */
-
-
-
-
-
-
-
-/* WHY choose us list */
-
-.all-service-why-choose {
-    padding: 40px 10px;
-    padding-bottom: 0px;
-}
-
-.why-choose-list {
+.cta-section .text-center {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    border-radius: 50px;
-    padding: 5px;
-    background: linear-gradient(135deg, #012e5b 40%, #496bff 100%);
-    transition: all 0.3s ease;
+    align-items: center;
+
 }
 
-
-.why-choose-list:hover {
-    transform: scale(1.03);
-}
-
-
-
-.why-choose-list p {
-    margin: 0px;
-    padding-left: 20px;
+.cta-section .section-title {
+    font-weight: 600;
+    line-height: 1.4;
     color: var(--white);
-    font-weight: 400;
-    text-transform: capitalize;
-}
-
-.why-choose-list img {
-    width: 50px;
+    z-index: 2;
+    max-width: 1000px;
+    margin-bottom: 10px;
 }
 
 
 
 
 
-/* ======LEFT SIDE SERVICE LIST ====== */
 
 
 
@@ -297,51 +455,6 @@ body {
 
 
 
-
-
-/* ======RIGHT SIDE SERVICE LIST ====== */
-
-.all-service-list {
-    border: 2px solid rgba(134, 134, 134, 0.2);
-    padding: 30px 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    background-color: var(--white);
-}
-
-
-.all-service-list .row .col-12 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-.all-service-list .service-list {
-    padding: 10px 15px;
-    text-align: center;
-    border-radius: 50px;
-    color: var(--white);
-    width: 90%;
-    background: linear-gradient(135deg, #000000 30%, #4e5057 100%);
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-}
-
-.all-service-list .service-list:hover {
-    transform: scale(1.05);
-}
-
-
-.service-list.active {
-    background: linear-gradient(135deg, #012e5b 40%, #496bff 100%);
-    transform: scale(1.05);
-}
-
-/* ======RIGHT SIDE SERVICE LIST ====== */
 
 
 
@@ -641,3 +754,78 @@ body {
 }
 
 /* ================= OUR PROCESS SECTION ================= */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= OTHER SERVISE SECTION ================= */
+.services-section {
+    background-color: var(--bg-white);
+}
+
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #222;
+}
+
+.service-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(1.02);
+}
+
+.service-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+    object-fit: contain;
+}
+
+.service-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.service-desc {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 16px;
+}
+
+.learn-more {
+    font-size: 0.9rem;
+    color: #28a745;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.learn-more:hover {
+    text-decoration: underline;
+}
+
+/* ================= OTHER SERVISE SECTION ================= */

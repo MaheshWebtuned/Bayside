@@ -1,13 +1,12 @@
-
 /* ======= Typography style ======= */
 :root {
-  --primary-blue: #032349;
-  --secondary-blue: #282982;
-  --light-blue: #6985E5;
-  --text-color: #3d3d3d;
-  --white: #FFF;
-  --black: #000000;
-  --bg-white: #F9F9F9;
+    --primary-blue: #032349;
+    --secondary-blue: #282982;
+    --light-blue: #6985E5;
+    --text-color: #3d3d3d;
+    --white: #FFF;
+    --black: #000000;
+    --bg-white: #F9F9F9;
 }
 
 
@@ -17,34 +16,34 @@
 
 html,
 body {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  height: 100%;
-  width: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    height: 100%;
+    width: 100%;
 
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  outline: none;
-  list-style: none;
-  word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+    word-wrap: break-word;
 }
 
 body {
-  font-family: "Outfit", sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.95em;
-  color: var(--gray);
-  overflow-x: hidden !important;
-  background: var(--white);
-  overflow-x: hidden;
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.95em;
+    color: var(--gray);
+    overflow-x: hidden !important;
+    background: var(--white);
+    overflow-x: hidden;
 }
 
 
@@ -59,7 +58,7 @@ body {
 /* BreadCrumb Section */
 .breadcrumb-box {
     position: relative;
-    background: url('../img/intro.jpg') center center / cover no-repeat;
+    background: url('../img/services/i6.jpg') center center / cover no-repeat;
     width: 100%;
     padding: clamp(4rem, 10vw, 8rem) 1rem;
 
@@ -80,7 +79,7 @@ body {
 }
 
 .breadcrumb-content {
-    max-width: 800px;
+    max-width: 900px;
 }
 
 
@@ -125,7 +124,7 @@ body {
 
 @media (max-width:945px) {
     .breadcrumb-content {
-        max-width: 800px;
+        max-width: 900px;
         margin-top: 40px;
     }
 }
@@ -178,7 +177,7 @@ body {
     color: var(--secondary-blue);
 }
 
-.contact-title span{
+.contact-title span {
     color: var(--light-blue);
 }
 
@@ -241,7 +240,7 @@ body {
 }
 
 .form-label {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     color: var(--black);
     display: flex;
@@ -249,7 +248,7 @@ body {
 }
 
 .form-label span {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     color: red;
     display: block;
