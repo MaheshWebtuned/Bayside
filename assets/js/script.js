@@ -61,10 +61,10 @@ $(function () {
             logo = $(".navbar .logo> img");
         if (bodyScroll > 100) {
             navbar.addClass("nav-scroll");
-            logo.attr('src', '../assets/img/bayside-custom-logo.png');
+            logo.attr('src', '/assets/img/bayside-custom-logo.png');
         } else {
             navbar.removeClass("nav-scroll");
-            logo.attr('src', '../assets/img/bayside-custom-logo.png');
+            logo.attr('src', '/assets/img/bayside-custom-logo.png');
         }
     });
 
@@ -180,6 +180,8 @@ $(function () {
             preload: [0, 1]
         }
     })
+
+
     $('.magnific-youtube, .magnific-vimeo, .magnific-custom').magnificPopup({
         disableOn: 700,
         type: 'iframe',
@@ -188,6 +190,17 @@ $(function () {
         preloader: false,
         fixedContentPos: false
     });
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -215,6 +228,15 @@ $(function () {
 
 
 
+
+
+
+
+
+
+
+
+
     // Isotope Active Masonry Gallery
     $('.gallery-items').imagesLoaded(function () {
         // Add isotope on click filter function
@@ -237,6 +259,13 @@ $(function () {
             layoutMode: 'masonry',
         });
     });
+
+
+
+
+
+
+
 
     // Animations
     var contentWayPoint = function () {
@@ -272,8 +301,17 @@ $(function () {
         contentWayPoint();
     });
 
+
+
     // YouTubePopUp
     $("a.vid").YouTubePopUp();
+
+
+
+
+
+
+
 
     // Scroll back to top
     var progressPath = document.querySelector('.progress-wrap path');
@@ -408,6 +446,8 @@ class HeroCarousel {
     }
 }
 
+
+
 // Initialize carousel
 document.addEventListener('DOMContentLoaded', () => {
     new HeroCarousel();
@@ -479,82 +519,4 @@ faqItems.forEach(item => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// General ANIMATION JS
-
-// Scroll Reveal with Single-Class Animations + Parent Stagger
-(() => {
-    const animElements = document.querySelectorAll(
-        ".from-bottom, .from-top, ., ., ., .fade-in, ., ., ., ."
-    );
-
-    const observer = new IntersectionObserver(
-        (entries) => {
-            const groups = new Map();
-
-            entries.forEach((entry) => {
-                if (!entry.isIntersecting) return;
-
-                const el = entry.target;
-                const parent = el.parentElement;
-
-                if (!groups.has(parent)) groups.set(parent, []);
-                groups.get(parent).push(el);
-
-                observer.unobserve(el);
-            });
-
-            // Apply stagger per parent
-            groups.forEach((elements) => {
-                elements.forEach((el, index) => {
-                    el.style.transitionDelay = `${index * 250}ms`; // stagger amount
-                    requestAnimationFrame(() => el.classList.add("is-visible"));
-                });
-            });
-        },
-        {
-            threshold: 0.15,
-            rootMargin: "0px 0px -60px 0px"
-        }
-    );
-
-    animElements.forEach((el) => observer.observe(el));
-})();
 
