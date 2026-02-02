@@ -61,10 +61,10 @@ $(function () {
             logo = $(".navbar .logo> img");
         if (bodyScroll > 100) {
             navbar.addClass("nav-scroll");
-            logo.attr('src', '/assets/img/bayside-custom-logo.png');
+            logo.attr('src', 'assets/img/bayside-custom-logo.png');
         } else {
             navbar.removeClass("nav-scroll");
-            logo.attr('src', '/assets/img/bayside-custom-logo.png');
+            logo.attr('src', 'assets/img/bayside-custom-logo.png');
         }
     });
 
@@ -88,6 +88,9 @@ $(function () {
             $(this).css("background-image", "url(" + $(this).data("background") + ")");
         }
     });
+
+
+
 
     // Slider & Slider-Fade owlCarousel  
     $(document).ready(function () {
